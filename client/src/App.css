@@ -1,0 +1,139 @@
+/* App.css */
+.Navigation {
+    position: fixed;  /* Fixed position relative to the viewport */
+    top: 10px;        /* 10 pixels from the top */
+    right: 10px;      /* 10 pixels from the right */
+    z-index: 1000;  
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use full view height for centering */
+    animation: gradientBackground 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientBackground {
+    0%, 100% {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    }
+    25% {
+        background: linear-gradient(-45deg, #23a6d5, #23d5ab, #ee7752, #e73c7e);
+    }
+    50% {
+        background: linear-gradient(-45deg, #23d5ab, #ee7752, #e73c7e, #23a6d5);
+    }
+    75% {
+        background: linear-gradient(-45deg, #e73c7e, #23a6d5, #23d5ab, #ee7752);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; /* Restricts form width for better layout */
+}
+
+h1 {
+    color: #fff; /* Light color for visibility on darker backgrounds */
+    text-align: center;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent for depth */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+textarea {
+    height: 150px; /* Increased height for better usability */
+    resize: vertical;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%; /* Full width button */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adds subtle shadow to button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error, .result {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out; /* Faster fade-in for snappier response */
+}
+
+.error {
+    background-color: #ffd6d6;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+}
+
+.result {
+    background: #eaffd0;
+    color: #4F8A10;
+    border: 1px solid #4CAF50;
+}
+
+.result h2 {
+    color: #4CAF50;
+}
+
+.result p {
+    color: #666;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

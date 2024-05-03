@@ -1,0 +1,12 @@
+Flask==2.1.2
+python-dotenv==0.20.0
+openai==0.28.0
+PyPDF2==2.10.0
+python-docx==0.8.11
+Flask-CORS==3.0.10
+Werkzeug==2.2.2
+flask-jwt-extended==4.6.0
+pymongo
+flask-bcrypt
+Flask-Session
+

@@ -1,0 +1,30 @@
+/* Register.css */
+.register-container {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form input,
+.register-form button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: black; /* Dark grey for contrast */
+  text-align: center; /* Center align the heading */
+}
