@@ -26,12 +26,16 @@ function Home({ setAuth }) {
     formData.append("jobDescription", jobDescription);
 
     try {
-      const response = await axios.post("http://localhost:5001/", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        withCredentials: true, // Ensure cookies are sent with the request
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_BASE_URL}/`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          withCredentials: true, // Ensure cookies are sent with the request
+        }
+      );
       setResult(response.data);
       setError("");
     } catch (error) {
@@ -58,7 +62,7 @@ function Home({ setAuth }) {
     <div>
       <form onSubmit={handleSubmit}>
         <div>
-          <h1 style={{ color: 'black'}}>Resume Screening Application</h1>
+          <h1 style={{ color: "black" }}>Resume Screening Application</h1>
           <label htmlFor="cvUpload">Upload CV (PDF or DOCX):</label>
           <input
             type="file"

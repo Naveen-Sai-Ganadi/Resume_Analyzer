@@ -21,10 +21,13 @@ function Register() {
     }
     setError(""); // Clear previous errors before a new API call
     try {
-      const response = await axios.post("http://localhost:5001/register", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_BASE_URL}/register`,
+        {
+          username,
+          password,
+        }
+      );
       console.log(response.data.message); // Log success message
       alert("Registration successful! You can now login."); // Inform user of success
       navigate("/login"); // Redirect to login page on successful registration

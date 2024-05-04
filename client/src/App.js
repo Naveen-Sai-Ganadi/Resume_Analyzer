@@ -20,7 +20,7 @@ function App() {
     const checkSession = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5001/check_session",
+          `${process.env.REACT_APP_BASE_URL}/check_session`,
           { withCredentials: true }
         );
         setAuthenticated(

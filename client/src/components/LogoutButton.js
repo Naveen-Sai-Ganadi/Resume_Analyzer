@@ -8,7 +8,7 @@ function LogoutButton({ setAuth }) {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5001/logout",
+        `${process.env.REACT_APP_BASE_URL}/logout`,
         {},
         { withCredentials: true } // Ensure cookies are sent with the request
       );

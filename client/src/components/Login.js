@@ -15,7 +15,7 @@ function Login({ setAuth }) {
     setError(""); // Clear previous errors
     try {
       const response = await axios.post(
-        "http://localhost:5001/login",
+        `${process.env.REACT_APP_BASE_URL}/login`,
         { username, password },
         { withCredentials: true } // Ensure cookies are sent with the request
       );
